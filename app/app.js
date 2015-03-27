@@ -18,7 +18,7 @@ export default App;
 /* Begin hacks to emulate 2.0 */
 App.reopen({
   init() {
-    var ret = this._super(...arguments);
+    this._super(...arguments);
     this.register('service:router', {
       create(attrs) {
         return attrs.container.lookup('router:main');
